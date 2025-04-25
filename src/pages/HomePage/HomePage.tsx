@@ -24,7 +24,7 @@ export function HomePage() {
         >
           <div className="absolute inset-0 bg-black/30"></div>
           <div className="relative max-w-7xl mx-auto">
-            <div className="absolute top-[-200px] right-[-145px] z-10">
+            <div className="absolute top-[-180px] right-[-125px] z-10">
               <img 
                 src="https://nexuseslink2024.s3.us-east-2.amazonaws.com/wmremove-transformed_2343fdff-3a5b-4192-adda-4756ecdc0c4c.png"
                 alt="24/7 Service"
