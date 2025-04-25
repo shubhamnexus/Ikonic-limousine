@@ -15,11 +15,13 @@ export function BookingForm() {
   const formRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Try multiple scroll methods to ensure it works
-    window.scrollTo(0, 0);
-    document.documentElement.scrollTo(0, 0);
-    document.body.scrollTo(0, 0);
-    formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Only scroll when changing steps, not on initial load
+    if (state.step > 1) {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTo(0, 0);
+      document.body.scrollTo(0, 0);
+      formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }, [state.step]);
 
   const handlePickupSelect = (location: Location) => {
