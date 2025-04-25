@@ -55,16 +55,17 @@ export function HomePage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {vehicles.filter(vehicle => vehicle.imageUrl && vehicle.imageUrl.trim() !== '').map((vehicle) => (
-                <div key={vehicle.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                  <div className="relative w-full h-64 bg-black">
+                <div key={vehicle.id} className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:border-[#FF6600]/20 hover:border-2">
+                  <div className="relative w-full h-64 bg-black group">
                     <img
                       src={vehicle.imageUrl}
                       alt={vehicle.name}
-                      className="absolute inset-0 w-full h-full object-cover"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2">{vehicle.name}</h3>
+                    <h3 className="text-xl font-semibold mb-2 group-hover:text-[#FF6600] transition-colors duration-300">{vehicle.name}</h3>
                     <div className="flex items-center text-gray-600 mb-2">
                       <Users className="w-4 h-4 mr-2" />
                       <span>Up to {vehicle.capacity} passengers</span>
@@ -90,7 +91,7 @@ export function HomePage() {
                             dispatch({ type: 'SET_VEHICLE', payload: vehicle });
                             window.scrollTo({ top: 0, behavior: 'smooth' });
                           }}
-                          className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors"
+                          className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-[#FF6600] hover:text-white transition-colors duration-300"
                         >
                           Select
                         </button>
