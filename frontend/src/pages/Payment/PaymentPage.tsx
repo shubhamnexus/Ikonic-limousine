@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { PaymentForm } from '../../components/PaymentGateway/PaymentForm';
 
 export function PaymentPage() {
