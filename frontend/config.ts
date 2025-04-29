@@ -1,2 +1,1 @@
-// Using relative URL to avoid CORS issues when deployed
-export const BACKEND_URL = "";
+export const BACKEND_URL = "http://localhost:5000";
