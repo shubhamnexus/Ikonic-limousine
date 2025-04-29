@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Lock, Car, MapPin, Calendar } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { loadStripe } from "@stripe/stripe-js";
-import { BACKEND_URL } from "../../../config";
 
 interface CardOption {
   id: string;
@@ -42,12 +41,13 @@ export function PaymentForm() {
 
       // Call the backend API to create a checkout session
       const response = await fetch(
-        `${BACKEND_URL}` + "/api/create-checkout-session",
+        `/api/create-checkout-session`,
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
+          credentials: "same-origin", // Use same-origin credentials for proxy
           body: JSON.stringify({
             amount: Math.round(booking.price * 100), // Convert to cents
             currency: "AED",
