@@ -1,4 +1,3 @@
-
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
@@ -8,8 +7,24 @@ import paymentRoutes from './routes/payment';
 dotenv.config();
 
 const app = express();
-app.use(cors());
+
+// Configure CORS with specific options
+app.use(cors({
+  origin: ["https://ikonic-booking.nexuses.xyz", "http://localhost:3000"],
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
+
+// Handle preflight OPTIONS requests
+app.options('*', cors());
+
 app.use(express.json());
+
+// Add health check endpoint
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
 
 app.use('/api', paymentRoutes);
 
