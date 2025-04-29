@@ -1,5 +1,4 @@
 "use client"
-import React from 'react';
 import { Users, Check } from 'lucide-react';
 import { BookingForm } from '../../components/BookingForm';
 import { useBooking } from '../../contexts/BookingContext';

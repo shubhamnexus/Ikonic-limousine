@@ -1,4 +1,3 @@
-import React from 'react';
 import { CheckCircle, Home } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
