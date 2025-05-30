@@ -1,73 +1,72 @@
 import React from 'react';
-import { Car, Clock, Shield } from 'lucide-react';
+import { Settings, HeadphonesIcon, ShieldCheck, Car } from 'lucide-react';
 
 export function AboutUs() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Elevating Luxury Travel with Unmatched Service
-          </h1>
-          <p className="text-xl text-gray-600">
-            At Ikonic Limousine, your time is our priority. We deliver precision, comfort, and reliability to transform every journey.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
-          <div className="text-center">
-            <div className="bg-[#FF6600] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Car className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Premium Fleet</h3>
-            <p className="text-gray-600">
-              Luxury vehicles maintained to the highest standards for your comfort and safety.
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 py-20">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
+          {/* Content Section */}
+          <div className="lg:w-2/5 animate-fadeIn">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              About <span className="text-[#FF6600]">Us</span>
+            </h1>
+            <h2 className="text-2xl text-[#FF6600] font-semibold mb-8">
+              Driven by Distinction. Defined by Elegance.
+            </h2>
+            <p className="text-gray-600 mb-8 text-lg leading-relaxed">
+              Ikonic Limousine is more than a luxury car service – it's a symbol of sophistication and trust. 
+              We are a subsidiary of the globally renowned Sawarthia Group, a leader in supply chain and logistics since 1981. 
+              Today, Ikonic stands as the benchmark in Dubai's premium ground transport, catering to discerning travelers, 
+              corporate elites, luxury hotels, and tourism partners.
             </p>
+            <button className="bg-[#FF6600] text-white px-8 py-3 rounded-full hover:bg-[#e65c00] transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-lg font-medium">
+              Know More
+            </button>
           </div>
 
-          <div className="text-center">
-            <div className="bg-[#FF6600] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Clock className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Punctual Service</h3>
-            <p className="text-gray-600">
-              Professional chauffeurs ensuring timely arrivals and departures.
-            </p>
-          </div>
-
-          <div className="text-center">
-            <div className="bg-[#FF6600] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Shield className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Safety First</h3>
-            <p className="text-gray-600">
-              Comprehensive safety measures and trained professionals for peace of mind.
-            </p>
+          {/* Image Section */}
+          <div className="lg:w-3/5 transform hover:scale-105 transition-transform duration-500 px-4 lg:px-8">
+            <img
+              src="https://cdn-nexlink.s3.us-east-2.amazonaws.com/erasebg-transformed_(1)_583eb315-4864-48d8-8b30-2f4c4166f89e.png"
+              alt="Luxury Vehicle"
+              className="w-full h-auto object-contain animate-float max-w-[800px] mx-auto"
+            />
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h2>
-          <div className="space-y-4">
-            <p>
-              <strong>Address:</strong> Office 608, Jumeirah Lakes Tower, Cluster X2, Dubai
-            </p>
-            <p>
-              <strong>Support:</strong>{' '}
-              <a href="mailto:support@ikoniclimousine.com" className="text-[#FF6600]">
-                support@ikoniclimousine.com
-              </a>
-            </p>
-            <p>
-              <strong>Phone:</strong>{' '}
-              <a href="tel:+97144498900" className="text-[#FF6600]">
-                +971 44 498900
-              </a>
-              {' / '}
-              <a href="tel:+971521296105" className="text-[#FF6600]">
-                +971 52 129 6105
-              </a>
-            </p>
+        {/* Service Icons Section */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mt-32">
+          <div className="text-center transform hover:scale-105 transition-all duration-300 p-6 bg-white rounded-xl shadow-lg hover:shadow-xl">
+            <div className="bg-gray-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Settings className="w-10 h-10 text-[#FF6600]" />
+            </div>
+            <h3 className="text-lg font-semibold mb-3">Engine Upgrades</h3>
+            <p className="text-gray-600">Regular maintenance and performance upgrades</p>
+          </div>
+
+          <div className="text-center transform hover:scale-105 transition-all duration-300 p-6 bg-white rounded-xl shadow-lg hover:shadow-xl">
+            <div className="bg-gray-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <HeadphonesIcon className="w-10 h-10 text-[#FF6600]" />
+            </div>
+            <h3 className="text-lg font-semibold mb-3">Free Support</h3>
+            <p className="text-gray-600">24/7 customer support available</p>
+          </div>
+
+          <div className="text-center transform hover:scale-105 transition-all duration-300 p-6 bg-white rounded-xl shadow-lg hover:shadow-xl">
+            <div className="bg-gray-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <ShieldCheck className="w-10 h-10 text-[#FF6600]" />
+            </div>
+            <h3 className="text-lg font-semibold mb-3">Security Inspections</h3>
+            <p className="text-gray-600">Regular security and safety checks</p>
+          </div>
+
+          <div className="text-center transform hover:scale-105 transition-all duration-300 p-6 bg-white rounded-xl shadow-lg hover:shadow-xl">
+            <div className="bg-gray-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Car className="w-10 h-10 text-[#FF6600]" />
+            </div>
+            <h3 className="text-lg font-semibold mb-3">Fleet Checkup</h3>
+            <p className="text-gray-600">Comprehensive vehicle inspections</p>
           </div>
         </div>
       </div>
